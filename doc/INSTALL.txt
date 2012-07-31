@@ -1,0 +1,7 @@
+
+- Node JS	
+	npm install socket.io
+	npm install -g amqp
+	
+	
+- 

@@ -21,7 +21,7 @@ public class CommandesRoute extends RouteBuilder {
 		.unmarshal().json(JsonLibrary.Jackson, Commande.class)
 		.log(LoggingLevel.DEBUG, "com.sqli.Commandes", "Commande reçue : ${in.body.id}")
 		.removeHeaders("*")
-		.to("spring-amqp:commandesExFO3?type=fanout")
+		.to("spring-amqp:commandesExFO3?type=fanout&autodelete=false")
 		.process(new Processor() {
 			
 			@Override
@@ -32,7 +32,7 @@ public class CommandesRoute extends RouteBuilder {
 		})
 		;
 		
-		from("spring-amqp:commandesExFO3:commandesQ2?type=fanout").process(new Processor() {
+		from("spring-amqp:commandesExFO3:commandesQ2?type=fanout&autodelete=false").process(new Processor() {
 			
 			@Override
 			public void process(Exchange exchange) throws Exception {

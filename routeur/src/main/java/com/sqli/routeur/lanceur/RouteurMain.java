@@ -14,7 +14,7 @@ public class RouteurMain {
 	private static final Logger LOG = LoggerFactory.getLogger(RouteurMain.class);
 	
 	public static void main(String[] args) throws Exception {
-		//
+		// passerelle logger
 		SLF4JBridgeHandler.removeHandlersForRootLogger();
 		SLF4JBridgeHandler.install();
 		
