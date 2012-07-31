@@ -4,3 +4,4 @@
 routeur/target
 routeur/.classpath
 node-app/public/img/Thumbs.db
+node-app/node_modules
