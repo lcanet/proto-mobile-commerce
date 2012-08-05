@@ -17,7 +17,7 @@ var mimeTypes = {
 function handler(req, res) {
 	
 	var filename = url.parse(req.url).pathname;
-    console.log("*** request " + filename);
+    console.log("HTTP request " + filename);
 
     if (filename == '/') {
     	filename = '/index.html';
@@ -64,7 +64,9 @@ io.sockets.on('connection', function(socket) {
 					socket.send(JSON.stringify(message));
         		});			
 			});
-			q.on('basicConsumeOk',function(){console.log('Subscribed')});
+			q.on('basicConsumeOk',function() {
+				console.log('AMQP Subscribed');
+			});
 		});
 	});
 	
