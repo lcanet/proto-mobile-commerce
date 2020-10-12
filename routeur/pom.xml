@@ -13,7 +13,7 @@
 	<properties>
 		<camel-version>2.9.1</camel-version>
 		<spring-version>3.0.7.RELEASE</spring-version>
-		<junit-version>4.10</junit-version>
+		<junit-version>4.13.1</junit-version>
 		<logback-version>1.0.0</logback-version>
 		<jackson-version>1.9.5</jackson-version>
 
